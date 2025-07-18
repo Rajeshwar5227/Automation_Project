@@ -1,0 +1,150 @@
+<html>
+                <head>
+                <title>Automation Results</title>
+                <style>
+                h1 {
+                    color: #0e8eab;
+                    text-align: left;
+                    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                }
+                .div-h1 {
+                    position: absolute;
+                    overflow: hidden;
+                    top: 0;
+                    width: auto;
+                    height: 100px;
+                    text-align: center;
+                }
+                .div-overalldata {
+                    position: absolute;
+                    top: 60px;
+                    width: 600px;
+                    height: auto;
+                    text-align: left;
+                    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                }
+                .label {
+                    color: #0e8eab;
+                    font-family: Arial;
+                    font-size: 14pt;
+                    font-weight: bold;
+                }
+                .value {
+                    color: black;
+                    font-family: Arial;
+                    font-size: 14pt;
+                }
+                .valuePass {
+                    color: green;
+                    font-family: Arial;
+                    animation: blinkingTextPass 0.8s infinite;
+                    font-weight: bold;
+                    font-size: 20pt;
+                }       
+                @keyframes blinkingTextPass{
+                    0%{     color: green; font-size: 0pt;  }
+                    50%{    color: lightgreen; }
+                    100%{   color: green; font-size: 14pt; } 
+                }
+                .valueFail {
+                    color: red;
+                    font-family: Arial;
+                    animation: blinkingTextFail 0.8s infinite;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                @keyframes blinkingTextFail{
+                    0%{     color: red; font-size: 0pt;   }
+                    50%{    color: orange; }
+                    100%{   color: red; font-size: 14pt;  }
+                }
+                .zui-table {
+                    border: none;
+                    border-right: solid 1px #DDEFEF;
+                    border-collapse: separate;
+                    border-spacing: 0;
+                    font: normal 13px Arial, sans-serif;
+                    width: 100%
+                }
+                .zui-table thead th {
+                    border-left: solid 1px white;
+                    border-bottom: solid 1px #DDEFEF;
+                    background-color: #0e8eab;
+                    color: white;
+                    padding: 10px;
+                    text-align: left;
+                    white-space: nowrap;
+                }
+                .zui-table tbody td {
+                    border-left: solid 1px #DDEFEF;
+                    border-right: solid 1px #DDEFEF;
+                    border-bottom: solid 1px #DDEFEF;
+                    padding: 10px;
+                    white-space: nowrap;
+                }
+                .td-pass {
+                    color: green;
+                    font-weight: bold;
+                }
+                .td-fail {
+                    color: red;
+                    font-weight: bold;
+                }
+                @media all{
+                    table tr th:nth-child(1),
+                    table tr td:nth-child(1),
+                    table tr th:nth-child(2),
+                    table tr td:nth-child(2){
+                        display: none;
+                    }
+                }
+                tr:nth-child(odd){background-color: #f2f2f2;}
+                tr:hover {background-color: #ddd; border-collapse: collapse;}
+                .zui-wrapper {
+                    position: relative;
+                    top: 100px;
+                    width: 100%;
+                    height: 100%;
+                }
+                .zui-scroller {
+                    margin-left: 141px;
+                    overflow-x: scroll;
+                    overflow-y: visible;
+                    padding-bottom: 5px;
+                }
+                .zui-table .zui-sticky-col {
+                    border-left: solid 1px #DDEFEF;
+                    border-right: solid 1px #DDEFEF;
+                    left: 0;
+                    position: absolute;
+                    top: auto;
+                    width: 120px;
+                }
+                .zui-table .zui-sticky-col-pass {
+                    border-left: solid 1px #DDEFEF;
+                    border-right: solid 1px #DDEFEF;
+                    left: 0;
+                    position: absolute;
+                    top: auto;
+                    width: 120px;
+                    color:green;
+                    font-weight: bold;
+                }
+                .zui-table .zui-sticky-col-fail {
+                    border-left: solid 1px #DDEFEF;
+                    border-right: solid 1px #DDEFEF;
+                    left: 0;
+                    position: absolute;
+                    top: auto;
+                    width: 120px;
+                    color:red;
+                    font-weight: bold;
+                }
+                </style>
+                <div class="div-h2">
+                    <h1>FIB Deep Dive - Candidate Performance SectionWise_QandA_byQuestionCount</h1>
+                </div>
+                </head>
+                <body style="overflow: hidden; ">
+                <div class="zui-wrapper">
+                <div class="zui-scroller"><table class="zui-table"><thead><tr><th>Overall_Status</th><th>Status</th><th>Test Id</th><th>Test User Id</th><th>G1_Name</th><th>G1S1_Name</th><th>G1S1CandQC</th><th>G1S1TotalQ</th><th>L_G1S1CandQC</th><th>L_G1S1TotalQ</th><th>M_G1S1CandQC</th><th>M_G1S1TotalQ</th><th>H_G1S1CandQC</th><th>H_G1S1TotalQ</th><th>G1S2_Name</th><th>G1S2CandQC</th><th>G1S2TotalQ</th><th>L_G1S2CandQC</th><th>L_G1S2TotalQ</th><th>M_G1S2CandQC</th><th>M_G1S2TotalQ</th><th>H_G1S2CandQC</th><th>H_G1S2TotalQ</th><th>G1CandQC</th><th>G1TotalQ</th><th>L_G1CandQC</th><th>L_G1TotalQ</th><th>M_G1CandQC</th><th>M_G1TotalQ</th><th>H_G1CandQC</th><th>H_G1TotalQ</th><th>G2_Name</th><th>G2S1_Name</th><th>G2S1CandQC</th><th>G2S1TotalQ</th><th>L_G2S1CandQC</th><th>L_G2S1TotalQ</th><th>M_G2S1CandQC</th><th>M_G2S1TotalQ</th><th>H_G2S1CandQC</th><th>H_G2S1TotalQ</th><th>G2S2_Name</th><th>G2S2CandQC</th><th>G2S2TotalQ</th><th>L_G2S2CandQC</th><th>L_G2S2TotalQ</th><th>M_G2S2CandQC</th><th>M_G2S2TotalQ</th><th>H_G2S2CandQC</th><th>H_G2S2Q</th><th>G2CandQC</th><th>G2TotalQ</th><th>L_G2CandQC</th><th>L_G2TotalQ</th><th>M_G2CandQC</th><th>M_G2TotalQ</th><th>H_G2CandQC</th><th>H_G2TotalQ</th><th>G3_Name</th><th>G3S1_Name</th><th>G3S1CandQC</th><th>G3S1TotalQ</th><th>L_G3S1CandQC</th><th>L_G3S1TotalQ</th><th>M_G3S1CandQC</th><th>M_G3S1TotalQ</th><th>H_G3S1CandQC</th><th>H_G3S1TotalQ</th><th>G3S2_Name</th><th>G3S2CandQC</th><th>G3S2TotalQ</th><th>L_G3S2CandQC</th><th>L_G3S2TotalQ</th><th>M_G3S2CandQC</th><th>M_G3S2TotalQ</th><th>H_G3S2CandQC</th><th>H_G3S2TotalQ</th><th>G3CandQC</th><th>G3TotalQ</th><th>L_G3CandQC</th><th>L_G3TotalQ</th><th>M_G3CandQC</th><th>M_G3TotalQ</th><th>H_G3CandQC</th><th>H_G3TotalQ</th><th class="zui-sticky-col">Status</th></tr></thead><tbody><tr><td></td><td></td><td> 11597.0 </td><td> 895372.0 </td><td> FIB_A </td><td> FIB_A_Sec_A </td><td> 2.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> FIB_A_Sec_B </td><td> 1.0 </td><td> 3.0 </td><td> 0.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 3.0 </td><td> 6.0 </td><td> 1.0 </td><td> 2.0 </td><td> 0.0 </td><td> 2.0 </td><td> 2.0 </td><td> 2.0 </td><td> FIB_B </td><td> FIB_B_Sec_A </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> FIB_B_Sec_B </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> FIB_C </td><td> FIB_C_Sec_A </td><td> 2.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> FIB_C_Sec_B </td><td> 2.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 4.0 </td><td> 6.0 </td><td> 2.0 </td><td> 2.0 </td><td> 1.0 </td><td> 2.0 </td><td> 1.0 </td><td> 2.0 </td><tr><td></td><td></td><td class="td-pass">11597</td><td class="td-pass">895372</td><td class="td-pass">FIB_A</td><td class="td-pass">FIB_A_Sec_A</td><td class="td-pass">2</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">FIB_A_Sec_B</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">6</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">0</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">FIB_B</td><td class="td-pass">FIB_B_Sec_A</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">FIB_B_Sec_B</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">FIB_C</td><td class="td-pass">FIB_C_Sec_A</td><td class="td-pass">2</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">FIB_C_Sec_B</td><td class="td-pass">2</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">4</td><td class="td-pass">6</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="zui-sticky-col-pass"><b>Pass</b></td></tr><tr><td></td><td></td><td> 11597.0 </td><td> 895373.0 </td><td> FIB_A </td><td> FIB_A_Sec_A </td><td> 2.0 </td><td> 3.0 </td><td> 0.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> FIB_A_Sec_B </td><td> 3.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 5.0 </td><td> 6.0 </td><td> 1.0 </td><td> 2.0 </td><td> 2.0 </td><td> 2.0 </td><td> 2.0 </td><td> 2.0 </td><td> FIB_B </td><td> FIB_B_Sec_A </td><td> 2.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> FIB_B_Sec_B </td><td> 1.0 </td><td> 3.0 </td><td> 0.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 3.0 </td><td> 6.0 </td><td> 1.0 </td><td> 2.0 </td><td> 1.0 </td><td> 2.0 </td><td> 1.0 </td><td> 2.0 </td><td> FIB_C </td><td> FIB_C_Sec_A </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> FIB_C_Sec_B </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><tr><td></td><td></td><td class="td-pass">11597</td><td class="td-pass">895373</td><td class="td-pass">FIB_A</td><td class="td-pass">FIB_A_Sec_A</td><td class="td-pass">2</td><td class="td-pass">3</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">FIB_A_Sec_B</td><td class="td-pass">3</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">5</td><td class="td-pass">6</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">FIB_B</td><td class="td-pass">FIB_B_Sec_A</td><td class="td-pass">2</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">FIB_B_Sec_B</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">6</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">FIB_C</td><td class="td-pass">FIB_C_Sec_A</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">FIB_C_Sec_B</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="zui-sticky-col-pass"><b>Pass</b></td></tr><tr><td></td><td></td><td> 11597.0 </td><td> 895396.0 </td><td> FIB_A </td><td> FIB_A_Sec_A </td><td> 3.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> FIB_A_Sec_B </td><td> 1.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 4.0 </td><td> 6.0 </td><td> 2.0 </td><td> 2.0 </td><td> 1.0 </td><td> 2.0 </td><td> 1.0 </td><td> 2.0 </td><td> FIB_B </td><td> FIB_B_Sec_A </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> FIB_B_Sec_B </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> Empty </td><td> FIB_C </td><td> FIB_C_Sec_A </td><td> 2.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> FIB_C_Sec_B </td><td> 1.0 </td><td> 3.0 </td><td> 1.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 0.0 </td><td> 1.0 </td><td> 3.0 </td><td> 6.0 </td><td> 2.0 </td><td> 2.0 </td><td> 1.0 </td><td> 2.0 </td><td> 0.0 </td><td> 2.0 </td><tr><td></td><td></td><td class="td-pass">11597</td><td class="td-pass">895396</td><td class="td-pass">FIB_A</td><td class="td-pass">FIB_A_Sec_A</td><td class="td-pass">3</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">FIB_A_Sec_B</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">4</td><td class="td-pass">6</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">FIB_B</td><td class="td-pass">FIB_B_Sec_A</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">FIB_B_Sec_B</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">FIB_C</td><td class="td-pass">FIB_C_Sec_A</td><td class="td-pass">2</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">FIB_C_Sec_B</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">6</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">0</td><td class="td-pass">2</td><td class="zui-sticky-col-pass"><b>Pass</b></td></tr></tbody></table></div></div></body><div class="div-overalldata"><span class="label">Execution Date:&nbsp;&nbsp;</span><span class="lable value">30/06/2025</span></br></br><span class="label">Overall Status:&nbsp;&nbsp;</span><span class="lable valuePass">PASS</span></div><tr><td></td><td></td><td class="td-pass">11597</td><td class="td-pass">895396</td><td class="td-pass">FIB_A</td><td class="td-pass">FIB_A_Sec_A</td><td class="td-pass">3</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">FIB_A_Sec_B</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">4</td><td class="td-pass">6</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">FIB_B</td><td class="td-pass">FIB_B_Sec_A</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">FIB_B_Sec_B</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">Empty</td><td class="td-pass">FIB_C</td><td class="td-pass">FIB_C_Sec_A</td><td class="td-pass">2</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">FIB_C_Sec_B</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">1</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">0</td><td class="td-pass">1</td><td class="td-pass">3</td><td class="td-pass">6</td><td class="td-pass">2</td><td class="td-pass">2</td><td class="td-pass">1</td><td class="td-pass">2</td><td class="td-pass">0</td><td class="td-pass">2</td><td class="zui-sticky-col-pass"><b>Pass</b></td></tr>
